@@ -10,7 +10,9 @@ int main(int argc, char *argv[])
     int tab3[4] = {1, 0, 0, 2};
     // produitMatrice(tab, 3, 3, tab, 3, 3);
     // afficheMatrice(tab, 3, 3);
-    produitMatrice(tab2, 3, 2, tab3, 2, 2);
+    produitMatrice(tab2, 3, 2, tab3, 2, 2); 
+    // Test d'erreur
+    produitMatrice(tab2, 3, 2, tab3, 1, 2); 
     return 0;
 }
 
