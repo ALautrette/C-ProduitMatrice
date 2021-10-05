@@ -6,13 +6,13 @@ void afficheMatrice(int *, int, int);
 int main(int argc, char *argv[])
 {
     int tab[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int tab2[6] = {1, 2, 3, 4, 5, 6};
-    int tab3[4] = {1, 0, 0, 2};
+    int tab2[6] = {1, 2, 3, 4, 5,6};
+    int tab3[4] = {1, 0, 0, 1};
     // produitMatrice(tab, 3, 3, tab, 3, 3);
     // afficheMatrice(tab, 3, 3);
     produitMatrice(tab2, 3, 2, tab3, 2, 2); 
     // Test d'erreur
-    produitMatrice(tab2, 3, 2, tab3, 1, 2); 
+    // produitMatrice(tab2, 3, 2, tab3, 1, 2); 
     return 0;
 }
 
@@ -28,7 +28,8 @@ void produitMatrice(int *m1, int l1, int c1, int *m2, int l2, int c2)
     }
     else
     {
-        int m[50];
+        int *m;
+        m = malloc(l1 * c2 * sizeof(int));
         int somme;
         for (int i = 0; i < l1; i++)
         {
